@@ -12,10 +12,8 @@
 
                     <div class="background__loginbtn">
                         <div>
-                                   <a type="submit" href="/review">Login</a>
-                                   <!-- <button type="submit">login</button> -->
-
-
+                            <a type="submit" href="/review">Login</a>
+                            <!-- <button type="submit">login</button> -->
                         </div>
 
                         <div>
@@ -67,7 +65,7 @@
             margin-top: 5rem;
 
             &>h1 {
-                font-family: Montserrat;
+                // //font-family: Montserrat;
                 font-weight: 700;
                 font-size: 2.5rem;
                 margin-bottom: 2.5rem;
@@ -80,7 +78,7 @@
                     font-size: 1.2rem;
                     color: gray;
                     margin-bottom: 1rem;
-                    font-family: Montserrat;
+                    //font-family: Montserrat;
                     font-weight: bold;
                 }
 
@@ -93,7 +91,7 @@
 
                     &::placeholder {
                         color: grey;
-                        font-family: montserrat;
+                        //font-family: Montserrat;
                         font-size: 1rem;
                     }
 
@@ -121,7 +119,7 @@
                 color: #fff;
                 text-decoration: none;
                 width: 100%;
-                font-family: montserrat;
+                //font-family: Montserrat;
                 font-size: 1.5rem;
                 font-weight: 600;
 

@@ -12,11 +12,11 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'preconnect',  href: 'https://fonts.gstatic.com' },
-      { rel: 'stylesheet',  href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap' },
-      { rel: 'stylesheet',  href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap' },
-      { rel: 'stylesheet',  href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Quicksand:wght@300&display=swap' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      // { rel: 'preconnect',  href: 'https://fonts.gstatic.com' },
+    //   { rel: 'stylesheet',  href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap' },
+    //   { rel: 'stylesheet',  href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap' },
+    //   { rel: 'stylesheet',  href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Quicksand:wght@300&display=swap' }
     ]
   },
 

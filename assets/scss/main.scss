@@ -16,7 +16,8 @@ html {
 body {
     // font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif !important;
+    background: red;
 }
 
 .container {
