@@ -425,7 +425,7 @@
             Dolor labore minus pariatur earum recusandae sapiente incidunt non
             e.
           </p>
-          <div class=" svg-block">
+          <div class="svg-block">
             <svg
               width="20"
               height="20"
@@ -761,13 +761,13 @@ header {
   }
 
   &__sec-text {
-    line-height: 12rem;
+    line-height: 8rem;
 
     & p:nth-child(1) {
       font-family: "Montserrat", sans-serif;
       color: #ffffff;
       text-transform: capitalize;
-      font-size: 8rem;
+      font-size: 5rem;
       font-weight: 600;
       word-spacing: 0.3rem;
 
@@ -777,18 +777,18 @@ header {
 
       & ~ svg:nth-child(4) {
         position: absolute;
-        top: 29.5rem;
-        right: 62.5rem;
-        width: 34rem;
+        top: 22.5rem;
+        right: 56.5rem;
+        width: 22rem;
         height: 20rem;
         // background: yellow;
       }
 
       & ~ svg:nth-child(3) {
         position: absolute;
-        top: 17.5rem;
-        right: 57.5rem;
-        width: 34rem;
+        top: 14.5rem;
+        right: 53.5rem;
+        width: 22rem;
         height: 20rem;
         // background: red;
       }
@@ -798,7 +798,7 @@ header {
       font-family: "Montserrat", sans-serif;
       color: #ffffff;
       text-transform: capitalize;
-      font-size: 8rem;
+      font-size: 5rem;
       font-weight: 600;
       word-spacing: 0.6rem;
 
@@ -816,7 +816,7 @@ header {
   background: #070512;
 
   & > p {
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
     font-family: "Quicksand", sans-serif !important;
     font-weight: 500 !important;
     // background: red;
@@ -942,7 +942,6 @@ header {
 }
 
 .check-div1 {
-  // background: #FA0A2A;
   display: flex;
 
   & > svg {
@@ -1297,7 +1296,7 @@ header {
   }
 }
 
-@media (max-width: 414px) {
+@media screen and (max-width: 414px) {
   body {
     background: #070512;
   }
@@ -1530,7 +1529,7 @@ header {
   }
 
   .second {
-    background-size: contain;
+    background-size: cover;
     padding-top: 20rem;
     &__div {
       &-img1 {
@@ -1658,4 +1657,458 @@ header {
     }
   }
 }
+
+@media screen and(max-width: 360px) {
+  header {
+    & .signup-div {
+      & > a span {
+        padding: 1.5rem 3rem;
+      }
+    }
+  }
+  .first {
+    &__sec-text {
+      line-height: 10rem;
+      & p:nth-child(1) {
+        font-size: 5rem;
+        & ~ svg:nth-child(3) {
+          position: absolute;
+          top: 25.5rem;
+          right: 2.5rem;
+          width: 20rem;
+          height: 20rem;
+          // background: yellow;
+        }
+        & ~ svg:nth-child(4) {
+          position: absolute;
+          top: 34.5rem;
+          right: 4.5rem;
+          width: 22rem;
+          height: 20rem;
+        }
+      }
+    }
+    & p:nth-child(2) {
+      font-size: 5rem;
+    }
+  }
+}
+@media screen and (max-width: 768px){
+.first{
+  &__sec-text{
+    & p:nth-child(1){
+      & ~ svg:nth-child(3){
+position: absolute;
+top: 24.7rem;
+right: 51rem;
+width: 18rem;
+height: 20rem;
+      }
+      & ~ svg:nth-child(4){
+        position: absolute;
+top: 35.5rem;
+right: 47.5rem;
+width: 21rem;
+height: 20rem;
+      }
+    }
+  }
+}
+
+  .second {
+    background-size: cover;
+    padding-top: 20rem;
+    &__div {
+      &-img1 {
+        width: 30rem;
+        position: relative;
+        left: -15rem;
+        top: -3rem;
+      }
+      &-img2 {
+    width: 40rem;
+height: 25rem;
+position: absolute;
+top: 75rem;
+left: 15rem;
+
+        // display: none;
+      }
+      &-img3 {
+      width: 40rem;
+position: absolute;
+left: 20rem;
+top: 100rem;
+height: 33rem;
+        // display: none;
+      }
+      &-img4 {
+       width: 27rem;
+left: 17rem;
+top: -1rem;
+
+        // display: none;
+      }
+      &-img5 {
+   width: 40rem;
+height: 30rem;
+top: -28rem;
+right: -10rem;
+left: -10rem;
+        // display: none;
+      }
+      &-img6 {
+       width: 35rem;
+    top: -3rem;
+    left: 19rem;
+    height: 40rem;
+        // display: none;
+      }
+      &-img7 {
+  width: 40rem;
+border: 6px solid #3f76ff;
+height: 40rem;
+top: -50rem;
+left: 85rem;
+        // display: none;
+      }
+    }
+  }
+.fifth{
+  &__first{
+    & img{
+      width: 50rem;
+    }
+  }
+}
+.sixth{
+
+  & div{
+    //  background: red;
+    & > svg{
+      width: 3rem;
+    }
+    & img {
+      width: 9rem;
+    }
+  }
+}
+
+
+}
+
+@media screen and (max-width: 320px){
+   header {
+     & ul{
+       padding: 0;
+     }
+     & .image-div{
+       & > img{
+         width: 6rem;
+       }
+     }
+    & .signup-div {
+      & > a span {
+        padding: 1.5rem 2rem;
+      }
+    }
+  }
+.first {
+    &__sec-text {
+      line-height: 7rem;
+      & p:nth-child(1) {
+        font-size: 4rem;
+        & ~ svg:nth-child(3) {
+        position: absolute;
+top: 10.5rem !important;
+right: 2.5rem !important;
+width: 20rem !important;
+height: 20rem !important;
+          // background: yellow;
+        }
+        & ~ svg:nth-child(4) {
+        position: absolute;
+top: 18.5rem !important;
+right: 4.5rem !important;
+width: 20rem !important;
+height: 20rem !important;
+        }
+      }
+      & p:nth-child(2) {
+      font-size: 4rem;
+    }
+    }
+
+
+}
+
+.second {
+    background-size: contain;
+    padding-top: 20rem;
+    &__div {
+      &-img1 {
+            width: 20rem;
+    position: relative;
+    left: -5rem;
+    top: -3rem;
+
+      }
+      &-img2 {
+        width: 25rem;
+height: 20rem;
+position: absolute;
+top: 75rem;
+left: 5rem;
+        // display: none;
+      }
+      &-img3 {
+       width: 25rem;
+position: absolute;
+left: 15rem;
+top: 95rem;
+height: 20rem;
+        // display: none;
+      }
+      &-img4 {
+        width: 15rem;
+left: 15rem;
+top: -1rem;
+
+        // display: none;
+      }
+      &-img5 {
+        width: 20rem;
+height: 20rem;
+top: -18rem;
+left: -8rem;
+
+        // display: none;
+      }
+      &-img6 {
+        width: 15em;
+top: -35rem;
+left: 39rem;
+height: 20rem;
+        // display: none;
+      }
+      &-img7 {
+        width: 20rem;
+border: 6px solid #3f76ff;
+height: 20rem;
+top: -50rem;
+left: 20rem;
+        // display: none;
+      }
+    }
+  }
+.fourth{
+  & > p{
+  font-size: 3rem;
+  }
+}
+.fifth{
+&__second{
+& > svg{
+width: 50rem;
+}
+}
+}
+.sixth{
+
+  & div{
+    //  background: red;
+    & > svg{
+      width: 3rem;
+    }
+    & img {
+      width: 5rem;
+    }
+  }
+}
+.seventh{
+  &__first{
+
+&-1{
+
+  & > p:nth-child(1){
+ font-size: 2rem;
+  // background: red;
+  }
+}
+  }
+&__second{
+left: 7rem;
+}
+& form{
+  & input{
+    padding: 0;
+  }
+}
+}
+
+}
+@media screen and (max-width: 375px){
+   header {
+     & ul{
+       padding: 0;
+     }
+     & .image-div{
+       & > img{
+         width: 6rem;
+       }
+     }
+    & .signup-div {
+      & > a span {
+        padding: 1.5rem 2rem;
+      }
+    }
+  }
+.first {
+    &__sec-text {
+      line-height: 7rem;
+      & p:nth-child(1) {
+        font-size: 4rem;
+        & ~ svg:nth-child(3) {
+     position: absolute;
+top: 10.5rem;
+right: 8.5rem;
+width: 20rem;
+height: 20rem;
+          // background: yellow;
+        }
+        & ~ svg:nth-child(4) {
+    position: absolute;
+    top: 18.5rem;
+    right: 10.5rem;
+    width: 20rem;
+    height: 20rem;
+        }
+      }
+      & p:nth-child(2) {
+      font-size: 4rem;
+    }
+    }
+
+
+}
+
+.second {
+    background-size: contain;
+    padding-top: 20rem;
+    &__div {
+      &-img1 {
+            width: 20rem;
+    position: relative;
+    left: -5rem;
+    top: -3rem;
+
+      }
+      &-img2 {
+        width: 25rem;
+height: 20rem;
+position: absolute;
+top: 75rem;
+left: 5rem;
+        // display: none;
+      }
+      &-img3 {
+       width: 25rem;
+position: absolute;
+left: 15rem;
+top: 95rem;
+height: 20rem;
+        // display: none;
+      }
+      &-img4 {
+        width: 15rem;
+left: 15rem;
+top: -1rem;
+
+        // display: none;
+      }
+      &-img5 {
+        width: 20rem;
+height: 20rem;
+top: -18rem;
+left: -8rem;
+
+        // display: none;
+      }
+      &-img6 {
+     width: 15em;
+top: -35rem;
+left: 52rem;
+height: 20rem;
+        // display: none;
+      }
+      &-img7 {
+      width: 20rem;
+border: 6px solid #3f76ff;
+height: 20rem;
+top: -50rem;
+left: 25rem;
+        // display: none;
+      }
+    }
+  }
+.fourth{
+  & > p{
+  font-size: 3rem;
+  }
+}
+.fifth{
+&__second{
+& > svg{
+width: 50rem;
+}
+}
+}
+.sixth{
+
+  & div{
+    //  background: red;
+    & > svg{
+      width: 3rem;
+    }
+    & img {
+      width: 5rem;
+    }
+  }
+}
+.seventh{
+  &__first{
+
+&-1{
+
+  & > p:nth-child(1){
+ font-size: 2rem;
+  // background: red;
+  }
+}
+  }
+&__second{
+
+}
+& form{
+  & input{
+    padding: 0;
+  }
+}
+}
+
+}
+
 </style>
+<script>
+export default {
+  head() {
+    return {
+      script: [
+        {
+          src: "/js/main.js",
+        },
+      ],
+    };
+  },
+};
+</script>

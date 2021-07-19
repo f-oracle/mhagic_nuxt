@@ -13,11 +13,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-      // { rel: 'preconnect',  href: 'https://fonts.gstatic.com' },
-    //   { rel: 'stylesheet',  href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap' },
-    //   { rel: 'stylesheet',  href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap' },
-    //   { rel: 'stylesheet',  href: 'https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Quicksand:wght@300&display=swap' }
-    ]
+    ],
+
+
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -45,6 +43,7 @@ export default {
       '~/assets/scss/_vars.scss'
     ]
   },
+
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {

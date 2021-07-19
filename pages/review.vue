@@ -140,18 +140,25 @@
     &-div {
       //    background: red;
       display: flex;
+        transition: 1ms transform;
     }
   }
 }
+
 .video-wrapper {
   margin: 5rem;
   background: #f78d8d;
   padding-top: 5rem;
   border-radius: 30px;
+    transition: 450ms all;
+  transform-origin: center left;
+
   & video {
     width: 40rem;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    // border-top-left-radius: 10px;
+    // border-top-right-radius: 10px;
+    cursor: pointer;
+
   }
   &-text {
     display: flex;
@@ -160,6 +167,40 @@
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     margin-top: -1rem;
+    opacity: 1;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+  transition: 450ms opacity;
+  &:after, &:before {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    display: none;
+  }
+  &:after {
+    margin-top: -25px;
+    margin-left: -25px;
+    width: 50px;
+    height: 50px;
+    // border: 3px solid #ecf0f1;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 100%;
+    // background: rgba(0, 0, 0, 0.5);
+    // z-index: 1;
+  }
+  &:before {
+    // content: '▶';
+    // color: #fff;
+    left: 0;
+    width: 100%;
+    font-size: 35px;
+    margin-left: 7px;
+    margin-top: -19px;
+    text-align: center;
+    z-index: 2;
+    cursor: pointer;
+  }
     & img {
       width: 5rem;
     }
@@ -169,12 +210,12 @@
     margin-left: 1rem;
     & p:nth-child(1) {
       color: #fff;
-      font-size: 1rem;
+      font-size: 1.5rem;
       font-weight: 600;
     }
     & p:nth-child(2) {
       color: #fff;
-      font-size: 0.8rem;
+      font-size: 1rem;
       font-weight: 400;
     }
   }
@@ -226,6 +267,7 @@
         left: 60%;
         bottom: 3rem;
         cursor: pointer;
+        transition: background-color 1500ms ease 2000ms;
      }
  }
 }
@@ -240,6 +282,31 @@
           font-weight: s00;
       }
 }
+
+
+// animation
+.review__horizontal-div:hover {
+  transform: translate3d(150px, 0, 0);
+  .video-wrapper {
+    opacity: 0.3;
+    &:hover {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+.video-wrapper:hover ~ .video-wrapper {
+  transform: translate3d(100px, 0, 0);
+}
+
+.video-wrapper:hover .video-wrapper-text {
+  opacity: 2;
+}
+
+
+
+
 @media screen and (max-width: 414px){
 .footer{
     width: 70%;
@@ -266,3 +333,16 @@
     }
 }
 </style>
+<script>
+  export default {
+    head() {
+      return {
+        script: [
+          {
+             src: '/js/main.js'
+          }
+        ],
+      }
+    }
+  }
+</script>
