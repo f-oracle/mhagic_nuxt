@@ -891,7 +891,7 @@ header {
     &-img6 {
       position: relative;
       top: -45rem;
-      left: 120rem;
+      left: 110rem;
       height: 40rem;
       width: 50rem;
     }
@@ -1307,17 +1307,17 @@ header {
         font-size: 5rem;
         & ~ svg:nth-child(3) {
           position: absolute;
-          top: 25.5rem;
-          right: 5.5rem;
-          width: 25rem;
-          height: 20rem;
+          top: 25.5rem !important;
+          right: 12.5rem !important;
+          width: 20rem !important;
+          height: 20rem !important;
           // background: yellow;
         }
         & ~ svg:nth-child(4) {
           position: absolute;
-          top: 35.5rem;
-          right: 8.5rem;
-          width: 25rem;
+          top: 35.5rem !important;
+          right: 8.5rem !important;
+          width: 25rem !important;
           height: 20rem;
         }
       }
@@ -1497,7 +1497,7 @@ header {
   }
 }
 
-@media (max-width: 1440px) {
+@media screen and (max-width: 1440px) {
   .first {
     &__sec-text {
       line-height: 10rem;
@@ -1585,10 +1585,10 @@ header {
   }
 
   .nineth {
-    padding: 10rem 0rem 0 10rem;
+    padding: 5rem 0rem 0 5rem;
   }
 }
-@media (max-width: 1280px) {
+@media screen and (max-width: 1280px) {
   .first {
     &__sec-text {
       line-height: 10rem;
@@ -1673,18 +1673,18 @@ header {
         font-size: 5rem;
         & ~ svg:nth-child(3) {
           position: absolute;
-          top: 25.5rem;
-          right: 2.5rem;
-          width: 20rem;
-          height: 20rem;
+          top: 10.5rem !important;
+          right: 7.5rem !important;
+          width: 20rem !important;
+          height: 20rem !important;
           // background: yellow;
         }
         & ~ svg:nth-child(4) {
           position: absolute;
-          top: 34.5rem;
-          right: 4.5rem;
-          width: 22rem;
-          height: 20rem;
+          top: 18.5rem !important;
+          right: 7.5rem !important;
+          width: 22rem !important;
+          height: 20rem !important;
         }
       }
     }
@@ -1693,27 +1693,27 @@ header {
     }
   }
 }
-@media screen and (max-width: 768px){
-.first{
-  &__sec-text{
-    & p:nth-child(1){
-      & ~ svg:nth-child(3){
-position: absolute;
-top: 24.7rem;
-right: 51rem;
-width: 18rem;
-height: 20rem;
-      }
-      & ~ svg:nth-child(4){
-        position: absolute;
-top: 35.5rem;
-right: 47.5rem;
-width: 21rem;
-height: 20rem;
+@media screen and (max-width: 768px) {
+  .first {
+    &__sec-text {
+      & p:nth-child(1) {
+        & ~ svg:nth-child(3) {
+          position: absolute;
+          top: 24.7rem;
+          right: 51rem;
+          width: 18rem;
+          height: 20rem;
+        }
+        & ~ svg:nth-child(4) {
+          position: absolute;
+          top: 35.5rem;
+          right: 47.5rem;
+          width: 21rem;
+          height: 20rem;
+        }
       }
     }
   }
-}
 
   .second {
     background-size: cover;
@@ -1726,378 +1726,359 @@ height: 20rem;
         top: -3rem;
       }
       &-img2 {
-    width: 40rem;
-height: 25rem;
-position: absolute;
-top: 75rem;
-left: 15rem;
+        width: 40rem;
+        height: 25rem;
+        position: absolute;
+        top: 75rem;
+        left: 15rem;
 
         // display: none;
       }
       &-img3 {
-      width: 40rem;
-position: absolute;
-left: 20rem;
-top: 100rem;
-height: 33rem;
+        width: 40rem;
+        position: absolute;
+        left: 20rem;
+        top: 100rem;
+        height: 33rem;
         // display: none;
       }
       &-img4 {
-       width: 27rem;
-left: 17rem;
-top: -1rem;
+        width: 27rem;
+        left: 17rem;
+        top: -1rem;
 
         // display: none;
       }
       &-img5 {
-   width: 40rem;
-height: 30rem;
-top: -28rem;
-right: -10rem;
-left: -10rem;
+        width: 40rem;
+        height: 30rem;
+        top: -28rem;
+        right: -10rem;
+        left: -10rem;
         // display: none;
       }
       &-img6 {
-       width: 35rem;
-    top: -3rem;
-    left: 19rem;
-    height: 40rem;
+        width: 35rem;
+        top: -3rem;
+        left: 19rem;
+        height: 40rem;
         // display: none;
       }
       &-img7 {
-  width: 40rem;
-border: 6px solid #3f76ff;
-height: 40rem;
-top: -50rem;
-left: 85rem;
+        width: 40rem;
+        border: 6px solid #3f76ff;
+        height: 40rem;
+        top: -50rem;
+        left: 85rem;
         // display: none;
       }
     }
   }
-.fifth{
-  &__first{
-    & img{
-      width: 50rem;
+  .fifth {
+    &__first {
+      & img {
+        width: 50rem;
+      }
+    }
+  }
+  .sixth {
+    & div {
+      //  background: red;
+      & > svg {
+        width: 3rem;
+      }
+      & img {
+        width: 9rem;
+      }
     }
   }
 }
-.sixth{
 
-  & div{
-    //  background: red;
-    & > svg{
-      width: 3rem;
+@media screen and (max-width: 320px) {
+  header {
+    & ul {
+      padding: 0;
     }
-    & img {
-      width: 9rem;
+    & .image-div {
+      & > img {
+        width: 6rem;
+      }
     }
-  }
-}
-
-
-}
-
-@media screen and (max-width: 320px){
-   header {
-     & ul{
-       padding: 0;
-     }
-     & .image-div{
-       & > img{
-         width: 6rem;
-       }
-     }
     & .signup-div {
       & > a span {
         padding: 1.5rem 2rem;
       }
     }
   }
-.first {
+  .first {
     &__sec-text {
       line-height: 7rem;
       & p:nth-child(1) {
         font-size: 4rem;
         & ~ svg:nth-child(3) {
-        position: absolute;
-top: 10.5rem !important;
-right: 2.5rem !important;
-width: 20rem !important;
-height: 20rem !important;
+          position: absolute;
+          top: 10.5rem !important;
+          right: 2.5rem !important;
+          width: 20rem !important;
+          height: 20rem !important;
           // background: yellow;
         }
         & ~ svg:nth-child(4) {
-        position: absolute;
-top: 18.5rem !important;
-right: 4.5rem !important;
-width: 20rem !important;
-height: 20rem !important;
+          position: absolute;
+          top: 18.5rem !important;
+          right: 4.5rem !important;
+          width: 20rem !important;
+          height: 20rem !important;
         }
       }
       & p:nth-child(2) {
-      font-size: 4rem;
+        font-size: 4rem;
+      }
     }
-    }
+  }
 
-
-}
-
-.second {
+  .second {
     background-size: contain;
     padding-top: 20rem;
     &__div {
       &-img1 {
-            width: 20rem;
-    position: relative;
-    left: -5rem;
-    top: -3rem;
-
+        width: 20rem;
+        position: relative;
+        left: -5rem;
+        top: -3rem;
       }
       &-img2 {
         width: 25rem;
-height: 20rem;
-position: absolute;
-top: 75rem;
-left: 5rem;
+        height: 20rem;
+        position: absolute;
+        top: 75rem;
+        left: 5rem;
         // display: none;
       }
       &-img3 {
-       width: 25rem;
-position: absolute;
-left: 15rem;
-top: 95rem;
-height: 20rem;
+        width: 25rem;
+        position: absolute;
+        left: 15rem;
+        top: 95rem;
+        height: 20rem;
         // display: none;
       }
       &-img4 {
         width: 15rem;
-left: 15rem;
-top: -1rem;
+        left: 15rem;
+        top: -1rem;
 
         // display: none;
       }
       &-img5 {
         width: 20rem;
-height: 20rem;
-top: -18rem;
-left: -8rem;
+        height: 20rem;
+        top: -18rem;
+        left: -8rem;
 
         // display: none;
       }
       &-img6 {
         width: 15em;
-top: -35rem;
-left: 39rem;
-height: 20rem;
+        top: -35rem;
+        left: 39rem;
+        height: 20rem;
         // display: none;
       }
       &-img7 {
         width: 20rem;
-border: 6px solid #3f76ff;
-height: 20rem;
-top: -50rem;
-left: 20rem;
+        border: 6px solid #3f76ff;
+        height: 20rem;
+        top: -50rem;
+        left: 20rem;
         // display: none;
       }
     }
   }
-.fourth{
-  & > p{
-  font-size: 3rem;
-  }
-}
-.fifth{
-&__second{
-& > svg{
-width: 50rem;
-}
-}
-}
-.sixth{
-
-  & div{
-    //  background: red;
-    & > svg{
-      width: 3rem;
-    }
-    & img {
-      width: 5rem;
+  .fourth {
+    & > p {
+      font-size: 3rem;
     }
   }
-}
-.seventh{
-  &__first{
-
-&-1{
-
-  & > p:nth-child(1){
- font-size: 2rem;
-  // background: red;
+  .fifth {
+    &__second {
+      & > svg {
+        width: 50rem;
+      }
+    }
+  }
+  .sixth {
+    & div {
+      //  background: red;
+      & > svg {
+        width: 3rem;
+      }
+      & img {
+        width: 5rem;
+      }
+    }
+  }
+  .seventh {
+    &__first {
+      &-1 {
+        & > p:nth-child(1) {
+          font-size: 2rem;
+          // background: red;
+        }
+      }
+    }
+    &__second {
+      left: 7rem;
+    }
+    & form {
+      & input {
+        padding: 0;
+      }
+    }
   }
 }
-  }
-&__second{
-left: 7rem;
-}
-& form{
-  & input{
-    padding: 0;
-  }
-}
-}
-
-}
-@media screen and (max-width: 375px){
-   header {
-     & ul{
-       padding: 0;
-     }
-     & .image-div{
-       & > img{
-         width: 6rem;
-       }
-     }
+@media screen and (max-width: 375px) {
+  header {
+    & ul {
+      padding: 0;
+    }
+    & .image-div {
+      & > img {
+        width: 6rem;
+      }
+    }
     & .signup-div {
       & > a span {
         padding: 1.5rem 2rem;
       }
     }
   }
-.first {
+  .first {
     &__sec-text {
       line-height: 7rem;
       & p:nth-child(1) {
         font-size: 4rem;
         & ~ svg:nth-child(3) {
-     position: absolute;
-top: 10.5rem;
-right: 8.5rem;
-width: 20rem;
-height: 20rem;
+          position: absolute;
+          top: 10.5rem !important;
+          right: 10rem !important;
+          width: 18rem !important;
+          height: 20rem !important;
           // background: yellow;
         }
         & ~ svg:nth-child(4) {
-    position: absolute;
-    top: 18.5rem;
-    right: 10.5rem;
-    width: 20rem;
-    height: 20rem;
+          position: absolute;
+          top: 18.5rem !important;
+          right: 10.5rem !important;
+          width: 20rem !important;
+          height: 20rem;
         }
       }
       & p:nth-child(2) {
-      font-size: 4rem;
+        font-size: 4rem;
+      }
     }
-    }
+  }
 
-
-}
-
-.second {
+  .second {
     background-size: contain;
     padding-top: 20rem;
     &__div {
       &-img1 {
-            width: 20rem;
-    position: relative;
-    left: -5rem;
-    top: -3rem;
-
+        width: 20rem;
+        position: relative;
+        left: -5rem;
+        top: -3rem;
       }
       &-img2 {
         width: 25rem;
-height: 20rem;
-position: absolute;
-top: 75rem;
-left: 5rem;
+        height: 20rem;
+        position: absolute;
+        top: 75rem;
+        left: 5rem;
         // display: none;
       }
       &-img3 {
-       width: 25rem;
-position: absolute;
-left: 15rem;
-top: 95rem;
-height: 20rem;
+        width: 25rem;
+        position: absolute;
+        left: 15rem;
+        top: 95rem;
+        height: 20rem;
         // display: none;
       }
       &-img4 {
         width: 15rem;
-left: 15rem;
-top: -1rem;
+        left: 15rem;
+        top: -1rem;
 
         // display: none;
       }
       &-img5 {
         width: 20rem;
-height: 20rem;
-top: -18rem;
-left: -8rem;
+        height: 20rem;
+        top: -18rem;
+        left: -8rem;
 
         // display: none;
       }
       &-img6 {
-     width: 15em;
-top: -35rem;
-left: 52rem;
-height: 20rem;
+        width: 15em;
+        top: -35rem;
+        left: 52rem;
+        height: 20rem;
         // display: none;
       }
       &-img7 {
-      width: 20rem;
-border: 6px solid #3f76ff;
-height: 20rem;
-top: -50rem;
-left: 25rem;
+        width: 20rem;
+        border: 6px solid #3f76ff;
+        height: 20rem;
+        top: -50rem;
+        left: 25rem;
         // display: none;
       }
     }
   }
-.fourth{
-  & > p{
-  font-size: 3rem;
-  }
-}
-.fifth{
-&__second{
-& > svg{
-width: 50rem;
-}
-}
-}
-.sixth{
-
-  & div{
-    //  background: red;
-    & > svg{
-      width: 3rem;
-    }
-    & img {
-      width: 5rem;
+  .fourth {
+    & > p {
+      font-size: 3rem;
     }
   }
-}
-.seventh{
-  &__first{
-
-&-1{
-
-  & > p:nth-child(1){
- font-size: 2rem;
-  // background: red;
+  .fifth {
+    &__second {
+      & > svg {
+        width: 50rem;
+      }
+    }
+  }
+  .sixth {
+    & div {
+      //  background: red;
+      & > svg {
+        width: 3rem;
+      }
+      & img {
+        width: 5rem;
+      }
+    }
+  }
+  .seventh {
+    &__first {
+      &-1 {
+        & > p:nth-child(1) {
+          font-size: 2rem;
+          // background: red;
+        }
+      }
+    }
+    &__second {
+    }
+    & form {
+      & input {
+        padding: 0;
+      }
+    }
   }
 }
-  }
-&__second{
-
-}
-& form{
-  & input{
-    padding: 0;
-  }
-}
-}
-
-}
-
 </style>
 <script>
 export default {
