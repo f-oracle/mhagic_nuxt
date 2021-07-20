@@ -688,7 +688,9 @@
 <style lang="scss" scoped>
 //  landing scss
 .body {
-  background: #070512;
+  background: #070512 !important;
+  width: 100vw;
+  height: 100vh;
 }
 header {
   background: #070512;
@@ -1211,7 +1213,7 @@ header {
   background: rgba(255, 255, 255, 0.04);
   text-align: left;
   padding: 3rem;
-  margin-bottom: 3rem;
+  // margin-bottom: 3rem;
 }
 .frequent-p {
   font-size: 4rem;
