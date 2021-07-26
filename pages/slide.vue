@@ -17,7 +17,7 @@
     </carousel>
 
     <div class="footer w-full grid justify-items-center absolute bottom-0">
-      <div class="footer__div1 w-2/4 p-12">
+      <div class="footer__div1 p-12">
         <div class="footer__div py-6 flex">
           <div class="block">
             <p class="text-3xl font-semibold capitalize">week 5 assignment</p>
@@ -66,7 +66,7 @@
               <p>@TajuSkills</p>
               <p>Tajudeen iberekodo</p>
             </div>
-            <div class="pl-64 views-div">
+            <div class="views-div">
               <svg
                 width="115"
                 height="25"
@@ -158,14 +158,14 @@ video {
   background: #000000;
   border-top-right-radius: 50px;
   border-top-left-radius: 50px;
+  width: 70rem;
 }
 .review-a{
-  margin: 3rem 0 3rem 7rem;
+  /* margin: 3rem 0 3rem 7rem; */
   display: block;
 }
-@media screen and (max-width:414px){
 .views-div{
-  padding-left: 0;
+  padding-left: 21rem;
 }
-}
+
 </style>
