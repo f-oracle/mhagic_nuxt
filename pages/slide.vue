@@ -1,8 +1,6 @@
 <template>
   <div class="app">
-    <a class="review-a" href="/review">
-    <img class="w-20 h-20" src="~assets/image/backarrow.png" alt="">
-    </a>
+
 
     <carousel @next="next" @prev="prev">
       <carousel-slide
