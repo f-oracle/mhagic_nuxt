@@ -2,10 +2,10 @@
   <div class="background">
     <div class="container background__container">
       <div>
-        <h1>Login</h1>
-        <form>
+        <h1 >Login</h1>
+        <form @submit.prevent="userLogin">
           <label for="name">Username</label>
-          <input type="text" name="email" required placeholder="Type Here" />
+          <input type="text" name="email" v-model="login.email" required placeholder="Type Here" />
           <label for="name">Password</label>
           <input
             type="text"
@@ -15,9 +15,11 @@
           />
 
           <div class="background__loginbtn">
-            <div>
-              <a type="submit" href="/review">Login</a>
-              <!-- <button type="submit">login</button> -->
+            <div class="w-full grid justify-center my-6">
+              <!-- <a type="submit" href="/review">Login</a> -->
+                <button  href="" @click="login" class="login-a started-a w-full  py-6 rounded-full">
+            Login
+          </button>
             </div>
 
             <div>
@@ -34,6 +36,29 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      login: {
+        email: '',
+        password: ''
+      }
+    }
+  },
+
+  methods: {
+    async userLogin() {
+      try {
+        let response = await this.$auth.loginWith('local', { data: this.login })
+        console.log(response)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .background {
@@ -45,10 +70,6 @@
   bottom: 0;
   display: grid;
   place-items: center;
-  // background-position: center center;
-  // background-repeat: no-repeat;
-  // background-attachment: fixed;
-  // -webkit-background-size: cover;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 99;
   cursor: pointer;
@@ -68,7 +89,6 @@
       margin-top: 5rem;
 
       & > h1 {
-        // //font-family: Montserrat;
         font-weight: 700;
         font-size: 2.5rem;
         margin-bottom: 2.5rem;
@@ -81,7 +101,6 @@
           font-size: 1.2rem;
           color: gray;
           margin-bottom: 1rem;
-          //font-family: Montserrat;
           font-weight: bold;
         }
 
@@ -94,7 +113,6 @@
 
           &::placeholder {
             color: grey;
-            //font-family: Montserrat;
             font-size: 1rem;
           }
         }
@@ -102,6 +120,14 @@
     }
   }
 
+.login-a {
+  background: rgba(247, 141, 141, 1);
+    color: #ffff;
+    font-size: 1.3rem;
+    font-weight: 900;
+
+
+}
   &__loginbtn {
     & div:nth-child(1) {
       width: 100%;
@@ -193,10 +219,16 @@
   }
 }
 
-@media screen and (max-width: 280px) {
+@media screen and (min-width: 774px) {
   .background {
     width: 100vw;
     height: 100vh;
+    &__container{
+    width: 50rem;
+    height: 60rem;
+    }
   }
 }
+
+
 </style>

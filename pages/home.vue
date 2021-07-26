@@ -7,7 +7,7 @@
         <li>Contact</li>
       </ul>
       <div class="image-div">
-        <img src="~assets/image/logo.png" alt="" />
+        <img class=" logo-img2" src="~assets/image/logo.png" alt="" />
       </div>
       <div class="signup-div">
         <a href=""><span>Sign in</span></a>
@@ -129,7 +129,7 @@
           src="~assets/image/Rectangle16.png"
           alt=""
         />
-        <img class="second__div-img7" src="~assets/image/dango.png" alt="" />
+        <img class="second__div-img7" src="~assets/image/img17.png" alt="" />
       </div>
     </section>
     <section class="third">
@@ -637,7 +637,7 @@
 
     <footer class="nineth">
       <div>
-        <img src="~assets/image/logo.png" alt="" />
+        <img class="nineth__img" src="~assets/image/logo.png" alt="" />
         <p>Mhagic</p>
         <div class="year-div">
           <svg
@@ -688,9 +688,7 @@
 <style lang="scss" scoped>
 //  landing scss
 .body {
-  background: #070512 !important;
-  width: 100vw;
-  height: 100vh;
+  background: #070512;
 }
 header {
   background: #070512;
@@ -710,7 +708,7 @@ header {
 
     & li {
       color: #dee2e1db;
-      font-size: 2rem;
+      font-size: 1.3rem;
       font-weight: 400;
       margin: 1rem 2rem;
     }
@@ -727,7 +725,7 @@ header {
   justify-content: center;
 
   & > a {
-    font-size: 2rem;
+    font-size: 1.3rem;
     font-size: montserrat;
     text-decoration: none;
     color: #dee2e1db;
@@ -735,12 +733,12 @@ header {
     margin-left: 6rem;
 
     & > span {
-      padding: 1.6rem 5rem;
+      padding: 1.5rem 3rem;
       background: #f78d8d;
       height: 3rem;
       border-radius: 40px;
       font-family: montserrat;
-      font-size: 2rem;
+      font-size: 1.3rem;
       font-weight: 500;
     }
   }
@@ -752,9 +750,11 @@ header {
   padding-top: 3rem;
 
   & > p {
-    font-family: "Nunito", sans-serif;
     text-transform: uppercase;
-    background: -webkit-linear-gradient(#f0b622, #fa0a2a);
+    background: -webkit-linear-gradient(left, #f0b622, #fa0a2a);
+    background: -o-linear-gradient(right, #f0b622, #fa0a2a);
+    background: -moz-linear-gradient(right, #f0b622, #fa0a2a);
+    background: linear-gradient(to right, #f0b622, #fa0a2a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 2rem;
@@ -766,7 +766,6 @@ header {
     line-height: 8rem;
 
     & p:nth-child(1) {
-      font-family: "Montserrat", sans-serif;
       color: #ffffff;
       text-transform: capitalize;
       font-size: 5rem;
@@ -783,7 +782,6 @@ header {
         right: 56.5rem;
         width: 22rem;
         height: 20rem;
-        // background: yellow;
       }
 
       & ~ svg:nth-child(3) {
@@ -792,7 +790,6 @@ header {
         right: 53.5rem;
         width: 22rem;
         height: 20rem;
-        // background: red;
       }
     }
 
@@ -818,21 +815,19 @@ header {
   background: #070512;
 
   & > p {
-    font-size: 2rem !important;
-    font-family: "Quicksand", sans-serif !important;
+    font-size: 1.6rem !important;
     font-weight: 500 !important;
-    // background: red;
     color: rgb(167, 152, 152) !important;
     margin-bottom: 5rem;
   }
 
   & > a {
-    padding: 3rem 5rem;
+    padding: 1.5rem;
     background: #f78d8d;
     text-decoration: none;
     color: #ffff;
-    font-family: "montserrat", sans-serif !important;
-    font-size: 2rem;
+    // font-family: "montserrat", sans-serif !important;
+    font-size: 1.3rem;
     font-weight: 900;
     border-radius: 50px;
   }
@@ -842,69 +837,62 @@ header {
   background: #070512;
   background-image: url("~assets/image/_Group_.png");
   background-repeat: no-repeat;
-  background-size: 70vw 100vh;
-  background-size: cover;
+  background-size: 100vw 100vh;
+  height: 80rem;
 
   &__div {
     margin-top: 0 !important;
 
     &-img1 {
-      width: 50rem;
+      width: 30rem;
       position: absolute;
-      top: 80%;
+      top: 90%;
       left: 0;
       z-index: 9;
     }
 
     &-img2 {
       position: relative;
-      left: -29%;
-      top: -14rem;
-      height: 40rem;
-      width: 60rem;
-      z-index: 9999;
-    }
-
-    &-img3 {
-      position: relative;
-      top: 45rem;
-      left: -57%;
-      width: 50rem;
-      height: 50rem;
-      z-index: 999;
-    }
-
-    &-img4 {
-      position: relative;
-      top: 70%;
-      left: 55%;
+      right: 10%;
+      top: 20%;
       width: 40rem;
       z-index: 9999;
     }
 
-    &-img5 {
+    &-img3 {
+      position: absolute;
+      width: 40rem;
+      z-index: 999;
+      left: 17%;
+    }
+
+    &-img4 {
       position: relative;
-      top: -45rem;
-      left: -5rem;
-      height: 40rem;
-      // width: 40rem;
+      top: 0%;
+      left: 40%;
+      width: 30rem;
+      z-index: 9999;
+      z-index: 9999;
+    }
+
+    &-img5 {
+      position: absolute;
+      top: 100%;
+      left: 40%;
+      width: 40rem;
     }
 
     &-img6 {
-      position: relative;
-      top: -45rem;
-      left: 110rem;
-      height: 40rem;
-      width: 50rem;
+      position: absolute;
+      top: 90%;
+      right: 0%;
+      width: 30rem;
     }
 
     &-img7 {
-      position: relative;
-      top: -90rem;
-      left: 50rem;
-      height: 40rem;
-      width: 50rem;
-      border: 6px solid #3f76ff;
+      position: absolute;
+      top: 90%;
+      right: 20%;
     }
   }
 }
@@ -913,6 +901,7 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   background: #070512;
+
 
   &__first {
     background: url("~assets/image/bluelight.png");
@@ -923,20 +912,23 @@ header {
 
   &__second {
     & > p:nth-child(1) {
-      font-size: 4rem;
+      font-size: 3rem;
       text-transform: capitalize;
       font-family: "montserrat", sans-serif !important;
       font-weight: 900;
-      background: -webkit-linear-gradient(#f0b622, #fa0a2a);
+      background: -webkit-linear-gradient(left, #f0b622, #fa0a2a);
+      background: -o-linear-gradient(right, #f0b622, #fa0a2a);
+      background: -moz-linear-gradient(right, #f0b622, #fa0a2a);
+      background: linear-gradient(to right, #f0b622, #fa0a2a);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 3rem;
     }
 
     & > p:nth-child(2) {
-      font-size: 2.5rem !important;
+      font-size: 1.5rem !important;
       font-family: "Quicksand", sans-serif !important;
-      font-weight: 800 !important;
+      font-weight: 500 !important;
       color: rgb(167, 152, 152) !important;
       margin-bottom: 5rem;
     }
@@ -948,13 +940,12 @@ header {
 
   & > svg {
     width: 30rem !important;
-    margin: 4rem 2rem;
+    margin: 2rem;
   }
 
   & > p {
-    font-size: 2rem !important;
-    font-family: "Quicksand", sans-serif !important;
-    font-weight: 800 !important;
+    font-size: 1.3rem !important;
+    font-weight: 400 !important;
     color: rgb(167, 152, 152) !important;
     margin-bottom: 5rem;
   }
@@ -965,13 +956,13 @@ header {
 
   & > svg {
     width: 30rem !important;
-    margin: 4rem 2rem;
+    margin: 2rem;
   }
 
   & > p {
-    font-size: 2rem !important;
-    font-family: "Quicksand", sans-serif !important;
-    font-weight: 800 !important;
+    font-size: 1.3rem !important;
+    // font-family: "Quicksand", sans-serif !important;
+    font-weight: 400 !important;
     color: rgb(167, 152, 152) !important;
     margin-bottom: 5rem;
   }
@@ -982,13 +973,13 @@ header {
 
   & > svg {
     width: 30rem !important;
-    margin: 4rem 2rem;
+    margin: 2rem;
   }
 
   & > p {
-    font-size: 2rem !important;
-    font-family: "Quicksand", sans-serif !important;
-    font-weight: 800 !important;
+    font-size: 1.3rem !important;
+    // font-family: "Quicksand", sans-serif !important;
+    font-weight: 400 !important;
     color: rgb(167, 152, 152) !important;
     margin-bottom: 5rem;
   }
@@ -1000,11 +991,14 @@ header {
   padding-top: 4rem;
 
   & > p {
-    font-size: 5rem;
+    font-size: 3rem;
     text-transform: capitalize;
     font-family: "montserrat", sans-serif !important;
     font-weight: 900;
-    background: -webkit-linear-gradient(#f0b622, #fa0a2a);
+    background: -webkit-linear-gradient(left, #f0b622, #fa0a2a);
+    background: -o-linear-gradient(right, #f0b622, #fa0a2a);
+    background: -moz-linear-gradient(right, #f0b622, #fa0a2a);
+    background: linear-gradient(to right, #f0b622, #fa0a2a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -1084,17 +1078,17 @@ header {
   &__second {
     margin-top: 25rem;
     & p:nth-child(1) {
-      font-size: 5rem;
+      font-size: 3rem;
       text-transform: capitalize;
-      font-family: "montserrat", sans-serif !important;
-      font-weight: 900;
+      //   font-family: "montserrat", sans-serif !important;
+      font-weight: 700;
       background: -webkit-linear-gradient(#f0b622, #fa0a2a);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
     & p:nth-child(2) {
-      font-size: 2rem !important;
-      font-family: "Quicksand", sans-serif !important;
+      font-size: 1.3rem !important;
+      //   font-family: "Quicksand", sans-serif !important;
       font-weight: 800 !important;
       color: rgb(167, 152, 152) !important;
       margin-bottom: 5rem;
@@ -1111,9 +1105,8 @@ header {
   & div {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
-    & img {
-      margin: 0 7rem;
-    }
+    place-items: center;
+
     &__img1 {
       width: 6rem;
     }
@@ -1125,7 +1118,6 @@ header {
   padding-top: 10rem;
   &__first {
     background: rgba(255, 255, 255, 0.04);
-    width: 70%;
     padding: 4rem 10rem;
     height: 50vh;
     &-1 {
@@ -1135,7 +1127,10 @@ header {
         text-transform: capitalize;
         font-family: "montserrat", sans-serif !important;
         font-weight: 900;
-        background: -webkit-linear-gradient(#f0b622, #fa0a2a);
+        background: -webkit-linear-gradient(left, #f0b622, #fa0a2a);
+        background: -o-linear-gradient(right, #f0b622, #fa0a2a);
+        background: -moz-linear-gradient(right, #f0b622, #fa0a2a);
+        background: linear-gradient(to right, #f0b622, #fa0a2a);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 2rem;
@@ -1207,26 +1202,30 @@ header {
 
   &__first {
     text-align: center;
+    padding-top: 5rem;
   }
 }
 .eight-div {
   background: rgba(255, 255, 255, 0.04);
   text-align: left;
   padding: 3rem;
-  // margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 .frequent-p {
   font-size: 4rem;
   text-transform: capitalize;
   font-family: "montserrat", sans-serif !important;
   font-weight: 900;
-  background: -webkit-linear-gradient(#f0b622, #fa0a2a);
+  background: -webkit-linear-gradient(left, #f0b622, #fa0a2a);
+  background: -o-linear-gradient(right, #f0b622, #fa0a2a);
+  background: -moz-linear-gradient(right, #f0b622, #fa0a2a);
+  background: linear-gradient(to right, #f0b622, #fa0a2a);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 2rem;
 }
 .lorem-a {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   text-transform: capitalize;
   font-family: "montserrat", sans-serif !important;
   color: #fff;
@@ -1236,6 +1235,10 @@ header {
   &__svg {
     display: flex;
     color: rgba(196, 196, 196, 1);
+    & > p {
+      font-size: 1.3rem;
+      width: 70%;
+    }
 
     & > svg {
       width: 4rem;
@@ -1249,17 +1252,21 @@ header {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   background: #070512;
-  padding: 10rem 10rem 0 30rem;
-
+  padding: 2rem;
+  place-items: center;
+  font-size: 1.2rem;
+  &__img {
+    width: 3rem;
+  }
   & div:nth-child(1) {
     color: #fff;
   }
 }
 .year-div {
   display: flex;
-  font-family: "Quicksand", sans-serif !important;
+  //   font-family: "Quicksand", sans-serif !important;
   font-weight: 200;
-  margin-top: 2rem;
+  margin-top: 1.3rem;
 }
 .footer-legal {
   display: grid;
@@ -1330,7 +1337,7 @@ header {
   }
 
   .second {
-    background-size: cover;
+    background-size: contain;
     padding-top: 20rem;
     &__div {
       &-img1 {
@@ -1359,19 +1366,7 @@ header {
         // display: none;
         left: 35%;
       }
-      &-img5 {
-        width: 30rem;
-        height: 20rem;
-        top: -20rem;
-        // display: none;
-      }
-      &-img6 {
-        width: 20rem;
-        top: -35rem;
-        left: 62rem;
-        height: 30rem;
-        // display: none;
-      }
+
       &-img7 {
         width: 25rem;
         border: 6px solid #3f76ff;
@@ -1535,46 +1530,40 @@ header {
     padding-top: 20rem;
     &__div {
       &-img1 {
-        width: 30rem;
-        position: relative;
-        left: -15rem;
-        top: 5rem;
+        width: 20rem;
+        position: absolute;
+        left: 0%;
+        top: 60%;
       }
       &-img2 {
-        width: 40rem;
-        height: 30rem;
+        width: 30rem;
         position: absolute;
-        top: 70rem;
-        left: 10rem;
+        top: 50%;
         // display: none;
       }
       &-img3 {
-        width: 40rem;
+        width: 30rem;
         position: absolute;
-        left: 35rem;
-        top: 95rem;
-        height: 32rem;
+        left: 50%;
+        top: 50%;
       }
       &-img4 {
         width: 30rem;
-        left: 30%;
-        top: -1rem;
+        left: 20%;
       }
       &-img5 {
+        position: absolute;
+        top: 60%;
+        left: 40%;
         width: 40rem;
-        height: 30rem;
-        top: -22rem;
-        left: -20rem;
-
-        // display: none;
       }
       &-img6 {
-        width: 35rem;
-        top: -35rem;
-        left: 100rem;
-        height: 40rem;
-        // display: none;
+        position: absolute;
+        top: 60%;
+        right: 0%;
+        width: 20rem;
       }
+
       &-img7 {
         width: 35rem;
         border: 6px solid #3f76ff;
@@ -1717,65 +1706,6 @@ header {
     }
   }
 
-  .second {
-    background-size: cover;
-    padding-top: 20rem;
-    &__div {
-      &-img1 {
-        width: 30rem;
-        position: relative;
-        left: -15rem;
-        top: -3rem;
-      }
-      &-img2 {
-        width: 40rem;
-        height: 25rem;
-        position: absolute;
-        top: 75rem;
-        left: 15rem;
-
-        // display: none;
-      }
-      &-img3 {
-        width: 40rem;
-        position: absolute;
-        left: 20rem;
-        top: 100rem;
-        height: 33rem;
-        // display: none;
-      }
-      &-img4 {
-        width: 27rem;
-        left: 17rem;
-        top: -1rem;
-
-        // display: none;
-      }
-      &-img5 {
-        width: 40rem;
-        height: 30rem;
-        top: -28rem;
-        right: -10rem;
-        left: -10rem;
-        // display: none;
-      }
-      &-img6 {
-        width: 35rem;
-        top: -3rem;
-        left: 19rem;
-        height: 40rem;
-        // display: none;
-      }
-      &-img7 {
-        width: 40rem;
-        border: 6px solid #3f76ff;
-        height: 40rem;
-        top: -50rem;
-        left: 85rem;
-        // display: none;
-      }
-    }
-  }
   .fifth {
     &__first {
       & img {
@@ -1839,64 +1769,6 @@ header {
     }
   }
 
-  .second {
-    background-size: contain;
-    padding-top: 20rem;
-    &__div {
-      &-img1 {
-        width: 20rem;
-        position: relative;
-        left: -5rem;
-        top: -3rem;
-      }
-      &-img2 {
-        width: 25rem;
-        height: 20rem;
-        position: absolute;
-        top: 75rem;
-        left: 5rem;
-        // display: none;
-      }
-      &-img3 {
-        width: 25rem;
-        position: absolute;
-        left: 15rem;
-        top: 95rem;
-        height: 20rem;
-        // display: none;
-      }
-      &-img4 {
-        width: 15rem;
-        left: 15rem;
-        top: -1rem;
-
-        // display: none;
-      }
-      &-img5 {
-        width: 20rem;
-        height: 20rem;
-        top: -18rem;
-        left: -8rem;
-
-        // display: none;
-      }
-      &-img6 {
-        width: 15em;
-        top: -35rem;
-        left: 39rem;
-        height: 20rem;
-        // display: none;
-      }
-      &-img7 {
-        width: 20rem;
-        border: 6px solid #3f76ff;
-        height: 20rem;
-        top: -50rem;
-        left: 20rem;
-        // display: none;
-      }
-    }
-  }
   .fourth {
     & > p {
       font-size: 3rem;
@@ -1982,64 +1854,6 @@ header {
     }
   }
 
-  .second {
-    background-size: contain;
-    padding-top: 20rem;
-    &__div {
-      &-img1 {
-        width: 20rem;
-        position: relative;
-        left: -5rem;
-        top: -3rem;
-      }
-      &-img2 {
-        width: 25rem;
-        height: 20rem;
-        position: absolute;
-        top: 75rem;
-        left: 5rem;
-        // display: none;
-      }
-      &-img3 {
-        width: 25rem;
-        position: absolute;
-        left: 15rem;
-        top: 95rem;
-        height: 20rem;
-        // display: none;
-      }
-      &-img4 {
-        width: 15rem;
-        left: 15rem;
-        top: -1rem;
-
-        // display: none;
-      }
-      &-img5 {
-        width: 20rem;
-        height: 20rem;
-        top: -18rem;
-        left: -8rem;
-
-        // display: none;
-      }
-      &-img6 {
-        width: 15em;
-        top: -35rem;
-        left: 52rem;
-        height: 20rem;
-        // display: none;
-      }
-      &-img7 {
-        width: 20rem;
-        border: 6px solid #3f76ff;
-        height: 20rem;
-        top: -50rem;
-        left: 25rem;
-        // display: none;
-      }
-    }
-  }
   .fourth {
     & > p {
       font-size: 3rem;

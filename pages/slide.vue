@@ -1,175 +1,171 @@
 <template>
-  <div>
-      <div>
-          <a class="back-tag" href="/review">
-            <img  src="~assets/image/backarrow.png" alt="">
-          </a>
+  <div class="app">
+    <a class="review-a" href="/review">
+    <img class="w-20 h-20" src="~assets/image/backarrow.png" alt="">
+    </a>
 
-    <VueSlickCarousel v-bind="settings">
-      <div> <video src="~assets/video/testvid.mp4" controls></video> </div>
-      <div><video src="~assets/video/testvid.mp4" controls></video></div>
-      <div><video src="~assets/video/testvid.mp4" controls></video></div>
-      <div><video src="~assets/video/testvid.mp4" controls></video></div>
-      <div> <video src="~assets/video/testvid.mp4" controls></video> </div>
-    </VueSlickCarousel>
-      </div>
-        <div class="footer">
-          <p>Week 5 Assignment</p>
-          <p>How to Scale Your Business Growth Exponentially</p>
-          <div class="svg">
+    <carousel @next="next" @prev="prev">
+      <carousel-slide
+        v-for="(slide, index) in slides"
+        :key="slide"
+        :index="index"
+        :visibleSlide="visibleSlide"
+        :direction="direction"
+      >
+        <video :src="slide" controls></video>
+      </carousel-slide>
+    </carousel>
 
-      <div class="flex-div">
-                                 <svg width="80" height="16" viewBox="0 0 80 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z" fill="#C4C4C4"/>
-<path d="M24 0L25.7961 5.52786H31.6085L26.9062 8.94427L28.7023 14.4721L24 11.0557L19.2977 14.4721L21.0938 8.94427L16.3915 5.52786H22.2039L24 0Z" fill="#C4C4C4"/>
-<path d="M40 0L41.7961 5.52786H47.6085L42.9062 8.94427L44.7023 14.4721L40 11.0557L35.2977 14.4721L37.0938 8.94427L32.3915 5.52786H38.2039L40 0Z" fill="#C4C4C4"/>
-<path d="M56 0L57.7961 5.52786H63.6085L58.9062 8.94427L60.7023 14.4721L56 11.0557L51.2977 14.4721L53.0938 8.94427L48.3915 5.52786H54.2039L56 0Z" fill="#C4C4C4"/>
-<path d="M72 0L73.7961 5.52786H79.6085L74.9062 8.94427L76.7023 14.4721L72 11.0557L67.2977 14.4721L69.0938 8.94427L64.3915 5.52786H70.2039L72 0Z" fill="#C4C4C4"/>
-</svg>
-<p>rate</p>
+    <div class="footer w-full grid justify-items-center absolute bottom-0">
+      <div class="footer__div1 w-2/4 p-12">
+        <div class="footer__div py-6 flex">
+          <div class="block">
+            <p class="text-3xl font-semibold capitalize">week 5 assignment</p>
+            <p class="text-3xl font-semibold capitalize">
+              how to scale your business growth exponentailly.
+            </p>
           </div>
 
-<p><svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.5 18C6.75001 18 4.15001 12.95 4.05001 12.7C4.00001 12.55 4.00001 12.4 4.05001 12.25C4.15001 12.05 6.75001 7 12.5 7C18.25 7 20.85 12.05 20.95 12.3C21 12.45 21 12.6 20.95 12.75C20.85 12.95 18.25 18 12.5 18ZM5.05001 12.5C5.60001 13.45 8.00001 17 12.5 17C17 17 19.35 13.45 19.95 12.5C19.4 11.55 17 8 12.5 8C8.00001 8 5.65001 11.55 5.05001 12.5Z" fill="white"/>
-<path d="M12.5 17C10 17 8 15 8 12.5C8 10 10 8 12.5 8C15 8 17 10 17 12.5C17 15 15 17 12.5 17ZM12.5 9C10.55 9 9 10.55 9 12.5C9 14.45 10.55 16 12.5 16C14.45 16 16 14.45 16 12.5C16 10.55 14.45 9 12.5 9Z" fill="white"/>
-<path d="M12.5 15C11.1 15 10 13.9 10 12.5C10 12.2 10.2 12 10.5 12C10.8 12 11 12.2 11 12.5C11 13.35 11.65 14 12.5 14C13.35 14 14 13.35 14 12.5C14 11.65 13.35 11 12.5 11C12.2 11 12 10.8 12 10.5C12 10.2 12.2 10 12.5 10C13.9 10 15 11.1 15 12.5C15 13.9 13.9 15 12.5 15Z" fill="white"/>
-</svg>
-3,6789 views</p>
-
+          <div class="footer__div-1 text-center">
+            <svg
+              width="80"
+              height="16"
+              viewBox="0 0 80 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 0L9.79611 5.52786H15.6085L10.9062 8.94427L12.7023 14.4721L8 11.0557L3.29772 14.4721L5.09383 8.94427L0.391548 5.52786H6.20389L8 0Z"
+                fill="#C4C4C4"
+              />
+              <path
+                d="M24 0L25.7961 5.52786H31.6085L26.9062 8.94427L28.7023 14.4721L24 11.0557L19.2977 14.4721L21.0938 8.94427L16.3915 5.52786H22.2039L24 0Z"
+                fill="#C4C4C4"
+              />
+              <path
+                d="M40 0L41.7961 5.52786H47.6085L42.9062 8.94427L44.7023 14.4721L40 11.0557L35.2977 14.4721L37.0938 8.94427L32.3915 5.52786H38.2039L40 0Z"
+                fill="#C4C4C4"
+              />
+              <path
+                d="M56 0L57.7961 5.52786H63.6085L58.9062 8.94427L60.7023 14.4721L56 11.0557L51.2977 14.4721L53.0938 8.94427L48.3915 5.52786H54.2039L56 0Z"
+                fill="#C4C4C4"
+              />
+              <path
+                d="M72 0L73.7961 5.52786H79.6085L74.9062 8.94427L76.7023 14.4721L72 11.0557L67.2977 14.4721L69.0938 8.94427L64.3915 5.52786H70.2039L72 0Z"
+                fill="#C4C4C4"
+              />
+            </svg>
+            <p>rate</p>
           </div>
-
-
-
-          <div class=img-div>
-           <img src="~assets/image/Ellipse.png" alt="">
-           <div class="p-text">
-             <p>@TejuSkills</p>
-           <p>Tajudeen Iberekodo</p>
-           </div>
-
-          </div>
-
         </div>
-  </div>
 
+        <div class="footer__div2">
+          <div class="flex">
+            <img class="w-20 h-20" src="~assets/image/avatar.png" alt="" />
+            <div class="pl-5">
+              <p>@TajuSkills</p>
+              <p>Tajudeen iberekodo</p>
+            </div>
+            <div class="pl-64 views-div">
+              <svg
+                width="115"
+                height="25"
+                viewBox="0 0 115 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.5 18C6.75001 18 4.15001 12.95 4.05001 12.7C4.00001 12.55 4.00001 12.4 4.05001 12.25C4.15001 12.05 6.75001 7 12.5 7C18.25 7 20.85 12.05 20.95 12.3C21 12.45 21 12.6 20.95 12.75C20.85 12.95 18.25 18 12.5 18ZM5.05001 12.5C5.60001 13.45 8.00001 17 12.5 17C17 17 19.35 13.45 19.95 12.5C19.4 11.55 17 8 12.5 8C8.00001 8 5.65001 11.55 5.05001 12.5Z"
+                  fill="white"
+                />
+                <path
+                  d="M12.5 17C10 17 8 15 8 12.5C8 10 10 8 12.5 8C15 8 17 10 17 12.5C17 15 15 17 12.5 17ZM12.5 9C10.55 9 9 10.55 9 12.5C9 14.45 10.55 16 12.5 16C14.45 16 16 14.45 16 12.5C16 10.55 14.45 9 12.5 9Z"
+                  fill="white"
+                />
+                <path
+                  d="M12.5 15C11.1 15 10 13.9 10 12.5C10 12.2 10.2 12 10.5 12C10.8 12 11 12.2 11 12.5C11 13.35 11.65 14 12.5 14C13.35 14 14 13.35 14 12.5C14 11.65 13.35 11 12.5 11C12.2 11 12 10.8 12 10.5C12 10.2 12.2 10 12.5 10C13.9 10 15 11.1 15 12.5C15 13.9 13.9 15 12.5 15Z"
+                  fill="white"
+                />
+                <path
+                  d="M38.06 10.4L40.832 6.914V6.2H34.532V7.096H39.544L36.828 10.498V11.24H37.528C39.348 11.24 40.174 12.01 40.174 13.186C40.174 14.404 39.278 15.16 37.654 15.16C36.38 15.16 35.246 14.684 34.616 14.026L34.126 14.824C34.882 15.594 36.24 16.084 37.654 16.084C40.02 16.084 41.21 14.824 41.21 13.186C41.21 11.618 40.16 10.512 38.06 10.4ZM43.4003 14.544C42.9803 14.544 42.6583 14.866 42.6583 15.3C42.6583 15.664 42.8683 15.93 43.1623 16.014L42.6863 18.044H43.3583L43.9463 16.112C44.0863 15.72 44.1423 15.538 44.1423 15.3C44.1423 14.88 43.8343 14.544 43.4003 14.544ZM49.5068 10.134C48.1488 10.134 47.0008 10.736 46.5108 11.814C46.4828 11.52 46.4688 11.24 46.4688 11.016C46.4688 8.356 47.8268 6.998 49.9408 6.998C50.6688 6.998 51.3408 7.124 51.8448 7.46L52.2508 6.648C51.6348 6.27 50.8088 6.116 49.9268 6.116C47.2668 6.116 45.4468 7.852 45.4468 11.184C45.4468 14.278 46.8608 16.084 49.4648 16.084C51.3688 16.084 52.8108 14.908 52.8108 13.074C52.8108 11.282 51.4528 10.134 49.5068 10.134ZM49.4228 15.23C47.7288 15.23 46.8328 14.208 46.8328 13.13C46.8328 11.912 47.8548 10.988 49.3528 10.988C50.8648 10.988 51.8168 11.814 51.8168 13.102C51.8168 14.404 50.8368 15.23 49.4228 15.23ZM53.5886 6.2V8.93H54.5826V7.096H59.6226L55.5906 16H56.6826L60.7846 6.914V6.2H53.5886ZM67.467 10.862C68.475 10.47 69.035 9.728 69.035 8.706C69.035 7.11 67.649 6.116 65.577 6.116C63.505 6.116 62.147 7.11 62.147 8.706C62.147 9.728 62.693 10.47 63.687 10.862C62.469 11.268 61.797 12.094 61.797 13.27C61.797 15.006 63.225 16.084 65.577 16.084C67.915 16.084 69.385 15.006 69.385 13.27C69.385 12.108 68.699 11.268 67.467 10.862ZM63.155 8.734C63.155 7.642 64.093 6.97 65.577 6.97C67.047 6.97 68.013 7.642 68.013 8.748C68.013 9.812 67.103 10.498 65.577 10.498C64.051 10.498 63.155 9.812 63.155 8.734ZM65.577 15.23C63.841 15.23 62.819 14.474 62.819 13.256C62.819 12.052 63.841 11.296 65.577 11.296C67.313 11.296 68.349 12.052 68.349 13.256C68.349 14.474 67.313 15.23 65.577 15.23ZM82.4108 6.2L78.6308 14.712L74.8788 6.2H73.7588L78.0988 16H79.1208L83.4608 6.2H82.4108ZM85.1361 7.026C85.5561 7.026 85.8641 6.704 85.8641 6.298C85.8641 5.92 85.5421 5.612 85.1361 5.612C84.7301 5.612 84.4081 5.934 84.4081 6.312C84.4081 6.704 84.7301 7.026 85.1361 7.026ZM84.6321 16H85.6261V8.636H84.6321V16ZM94.8179 12.318C94.8179 10.106 93.3199 8.58 91.2479 8.58C89.1759 8.58 87.6499 10.134 87.6499 12.318C87.6499 14.502 89.2179 16.07 91.5139 16.07C92.6759 16.07 93.6979 15.65 94.3559 14.866L93.7959 14.222C93.2359 14.866 92.4379 15.188 91.5419 15.188C89.9319 15.188 88.7559 14.166 88.6439 12.626H94.8039C94.8039 12.514 94.8179 12.402 94.8179 12.318ZM91.2479 9.434C92.6899 9.434 93.7399 10.442 93.8659 11.884H88.6439C88.7699 10.442 89.8199 9.434 91.2479 9.434ZM106.602 8.636L104.264 14.894L101.912 8.636H101.058L98.6924 14.894L96.3824 8.636H95.4304L98.2024 16H99.1404L101.464 9.966L103.788 16H104.726L107.512 8.636H106.602ZM110.901 16.07C112.819 16.07 113.939 15.244 113.939 13.97C113.939 11.142 109.165 12.64 109.165 10.652C109.165 9.952 109.753 9.434 111.083 9.434C111.839 9.434 112.609 9.616 113.253 10.064L113.687 9.266C113.071 8.846 112.035 8.58 111.083 8.58C109.207 8.58 108.171 9.476 108.171 10.68C108.171 13.592 112.945 12.08 112.945 13.998C112.945 14.726 112.371 15.202 110.971 15.202C109.935 15.202 108.941 14.838 108.353 14.376L107.905 15.16C108.507 15.678 109.683 16.07 110.901 16.07Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-  import VueSlickCarousel from 'vue-slick-carousel'
-  import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-  // optional style for arrows & dots
-  import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
-
-
-  export default {
-    // name: 'MyComponent',
-    components: { VueSlickCarousel },
-     data() {
-      return {
-        settings: {
-           "dots": true,
-  "dotsClass": "slick-dots custom-dot-class",
-  "edgeFriction": 0.35,
-  "infinite": false,
-  "speed": 500,
-  "slidesToShow": 1,
-  "slidesToScroll": 1,
-  "arrows": true
-        },
-      }
+import Carousel from "../components/Carousel.vue";
+import CarouselSlide from "../components/CarouselSlide.vue";
+export default {
+  data() {
+    return {
+      slides: [
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+        "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      ],
+      visibleSlide: 0,
+      direction: "left",
+    };
+  },
+  computed: {
+    slidesLen() {
+      return this.slides.length;
     },
-  }
+  },
+  methods: {
+    next() {
+      if (this.visibleSlide >= this.slidesLen - 1) {
+        this.visibleSlide = 0;
+      } else {
+        this.visibleSlide++;
+      }
+      this.direction = "left";
+    },
+    prev() {
+      if (this.visibleSlide <= 0) {
+        this.visibleSlide = this.slidesLen - 1;
+      } else {
+        this.visibleSlide--;
+      }
+      this.direction = "right";
+    },
+  },
+  components: {
+    Carousel,
+    CarouselSlide,
+  },
+};
 </script>
-<style lang="scss" scoped>
 
-.slicker-slide{
-    height: 100%;
+<style >
+video {
+  object-fit: contain;
 }
-
-
-video{
-    position: relative;
-    top: 10rem;
-    left: 26rem;
-    object-fit: contain;
-    // width: 50%;
-
+.app {
+  width: 100%;
+  height: 100vh;
 }
-button.slick-prev:before, .slick-next:before {
-    color:red !important;
-    /* position: relative  !important; */
-}
-.slick-prev{
-    /* position: relative !important; */
-    bottom: 40rem;
-}
-.back-tag{
-    position: absolute;
-    cursor: pointer !important;
-    & > img{
-     width: 5rem;
-
-    //  background: red !important;
-     position: relative;
-     top: 10rem;
-     left: 5rem;
-    }
-}
-.slick-prev{
-position: relative;
-}
-.footer{
-    border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  width: 50%;
-  padding: 1rem 5rem;
+.footer__div1 {
+  color: #fff;
   background: #000000;
-  color: white;
-  position: relative;
-bottom: -14.8rem;
-left: 50rem;
-padding: 3rem 5rem;
-& svg{
-    float: right;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+.review-a{
+  margin: 3rem 0 3rem 7rem;
+  display: block;
+}
+@media screen and (max-width:414px){
+.views-div{
+  padding-left: 0;
 }
 }
-.img-div{
-    margin-top: 2rem;
-    display: flex;
-
-}
-.p-text{
-    margin-left: 2rem;
- & >p:nth-child(1){
-     font-size: 1.3rem;
-     font-weight: 600;
-
- }
-  & >p:nth-child(2){
-     font-size: 1rem;
-     font-weight: 200;
-
- }
-}
-.svg{
-    float: right;
-}
-.flex-div{
-    display: grid;
-    margin-bottom: 3rem;
-& p{
-    color: rgba(255, 186, 82, 1);
-
-;
-}
-}
-@media screen and (max-width:1440px){
-.footer{
- position: relative;
-bottom: -1rem;
-left: 50rem;
-padding: 3rem 5rem;
-}
-}
-
 </style>
