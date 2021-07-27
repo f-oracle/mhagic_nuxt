@@ -1,9 +1,9 @@
 <template>
   <div class="carousel">
     <slot> </slot>
- <a class="review-a" href="/review">
+ <!-- <a class="review-a" href="/review">
     <img class="w-20 h-20" src="~assets/image/backarrow.png" alt="">
-    </a>
+    </a> -->
     <button @click="next" class="next"><svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="19" cy="19" r="19" transform="rotate(-180 19 19)" fill="black" fill-opacity="0.81"/>
 <path d="M24.3307 19L17.319 11.9883L15.6694 13.638L21.036 19.0047L15.6694 24.3713L17.319 26.0117L24.3307 19Z" fill="white"/>
@@ -60,7 +60,6 @@ button {
   position: absolute;
   top: 2%;
   left: 2%;
-
 }
 button:focus,
 button:hover {

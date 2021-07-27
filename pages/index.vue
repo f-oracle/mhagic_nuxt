@@ -3,13 +3,16 @@
     <div class="container background__container">
       <div>
         <h1 >Login</h1>
-        <form @submit.prevent="userLogin">
+        <form @submit="submitForm">
           <label for="name">Username</label>
-          <input type="text" name="email" v-model="login.email" required placeholder="Type Here" />
+          <input name="email" id="email"
+              v-model="email"
+              type="email" required placeholder="Type Here" />
           <label for="name">Password</label>
           <input
-            type="text"
-            name="password"
+           id="password"
+              v-model="password"
+              type="password"
             required
             placeholder="8+ characters"
           />
@@ -17,7 +20,7 @@
           <div class="background__loginbtn">
             <div class="w-full grid justify-center my-6">
               <!-- <a type="submit" href="/review">Login</a> -->
-                <button  href="" @click="login" class="login-a started-a w-full  py-6 rounded-full">
+                <button  href="" type="submit" class="login-a started-a w-full  py-6 rounded-full">
             Login
           </button>
             </div>
@@ -38,22 +41,27 @@
 </template>
 <script>
 export default {
+  // name: 'LoginPage',
   data() {
     return {
-      login: {
-        email: '',
-        password: ''
-      }
+      email: '',
+      password: ''
     }
   },
-
   methods: {
-    async userLogin() {
+    async submitForm(evt) {
+      evt.preventDefault()
+      const credentials = {
+        email: this.email,
+        password: this.password
+      }
       try {
-        let response = await this.$auth.loginWith('local', { data: this.login })
-        console.log(response)
-      } catch (err) {
-        console.log(err)
+        await this.$auth.loginWith('local', {
+          data: credentials
+        })
+        this.$router.push('/review')
+      } catch (e) {
+        this.$router.push('/')
       }
     }
   }

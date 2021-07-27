@@ -44,6 +44,36 @@ export default {
     '@nuxtjs/auth-next',
 
   ],
+  axios: {
+    baseURL: 'http://138.68.141.55/api/v1/',
+    credentials: true
+  },
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: 'login',
+            method: 'post',
+            propertyName: false
+          },
+          logout: {
+            url: 'logout',
+            method: 'post'
+          },
+          user: {
+            url: 'review',
+            method: 'get',
+            propertyName: false
+          }
+        },
+        tokenRequired: false,
+        tokenType: false
+      }
+    }
+  },
+
+
   styleResources: {
     scss: [
       '~/assets/scss/_vars.scss'

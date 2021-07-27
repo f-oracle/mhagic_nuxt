@@ -156,14 +156,14 @@ video {
   background: #000000;
   border-top-right-radius: 50px;
   border-top-left-radius: 50px;
-  width: 70rem;
+  /* width: 70rem; */
 }
 .review-a{
   /* margin: 3rem 0 3rem 7rem; */
   display: block;
 }
 .views-div{
-  padding-left: 21rem;
+  padding-left: 23rem;
 }
 
 </style>

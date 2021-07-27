@@ -98,38 +98,8 @@
     </section>
 
     <section class="second">
-      <div class="second__div container">
-        <img
-          class="second__div-img1"
-          src="~assets/image/Rectangle10.png"
-          alt=""
-        />
-        <img
-          class="second__div-img2"
-          src="~assets/image/Rectangle12.png"
-          alt=""
-        />
-        <img
-          class="second__div-img3"
-          src="~assets/image/Rectangle13.png"
-          alt=""
-        />
-        <img
-          class="second__div-img4"
-          src="~assets/image/Rectangle14.png"
-          alt=""
-        />
-        <img
-          class="second__div-img5"
-          src="~assets/image/Rectangle15.png"
-          alt=""
-        />
-        <img
-          class="second__div-img6"
-          src="~assets/image/Rectangle16.png"
-          alt=""
-        />
-        <img class="second__div-img7" src="~assets/image/img17.png" alt="" />
+      <div class="second__div">
+       <img class="img-sec2" src="~assets/image/section2.png" alt="">
       </div>
     </section>
     <section class="third">
@@ -370,8 +340,11 @@
       </div>
     </section>
     <section class="sixth">
+
       <div>
-        <svg
+        <div class="left-btn">
+          <button @click="swipeLeft">
+            <svg
           width="33"
           height="33"
           viewBox="0 0 33 33"
@@ -386,7 +359,11 @@
             fill-opacity="0.2"
           />
         </svg>
+          </button>
+        </div>
+        <!-- left -->
 
+        <div class="center">
         <img class="sixth__img1" src="~assets/image/PayPal 1@2x.png" alt="" />
         <img class="sixth__img2" src="~assets/image/Group 513.png" alt="" />
         <img class="sixth__img3" src="~assets/image/Group.png" alt="" />
@@ -398,8 +375,12 @@
         />
         <img class="sixth__img6" src="~assets/image/3019511636752.png" alt="" />
         <img class="sixth__img7" src="~assets/image/Layer x0020 2.png" alt="" />
+        </div>
 
-        <svg
+
+        <div class="right-btn">
+          <button  @click="swipeRight">
+             <svg
           width="33"
           height="33"
           viewBox="0 0 33 33"
@@ -413,7 +394,13 @@
             fill="white"
           />
         </svg>
+          </button>
+        </div>
+        <!-- right -->
+
       </div>
+
+
     </section>
 
     <section class="seventh">
@@ -809,7 +796,7 @@ header {
 }
 
 .lorem-div {
-  margin-top: 4rem;
+  margin: 2rem 0;
   color: rgb(167, 152, 152);
   line-height: 4rem;
   background: #070512;
@@ -842,59 +829,10 @@ header {
 
   &__div {
     margin-top: 0 !important;
-
-    &-img1 {
-      width: 30rem;
-      position: absolute;
-      top: 90%;
-      left: 0;
-      z-index: 9;
-    }
-
-    &-img2 {
-      position: relative;
-      right: 10%;
-      top: 20%;
-      width: 40rem;
-      z-index: 9999;
-    }
-
-    &-img3 {
-      position: absolute;
-      width: 40rem;
-      z-index: 999;
-      left: 17%;
-    }
-
-    &-img4 {
-      position: relative;
-      top: 0%;
-      left: 40%;
-      width: 30rem;
-      z-index: 9999;
-      z-index: 9999;
-    }
-
-    &-img5 {
-      position: absolute;
-      top: 100%;
-      left: 40%;
-      width: 40rem;
-    }
-
-    &-img6 {
-      position: absolute;
-      top: 90%;
-      right: 0%;
-      width: 30rem;
-    }
-
-    &-img7 {
-      position: absolute;
-      top: 90%;
-      right: 20%;
-    }
   }
+}
+.img-sec2{
+  width: 100%;
 }
 
 .third {
@@ -993,7 +931,6 @@ header {
   & > p {
     font-size: 3rem;
     text-transform: capitalize;
-    font-family: "montserrat", sans-serif !important;
     font-weight: 900;
     background: -webkit-linear-gradient(left, #f0b622, #fa0a2a);
     background: -o-linear-gradient(right, #f0b622, #fa0a2a);
@@ -1001,24 +938,24 @@ header {
     background: linear-gradient(to right, #f0b622, #fa0a2a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
   }
 
   &__button {
-    margin-bottom: 10rem;
+    margin-bottom: 3rem;
+    display: flex;
     & > button {
-      font-size: 2rem;
+      font-size: 1.2rem;
       text-transform: capitalize;
       text-decoration: none;
-      font-family: "montserrat", sans-serif !important;
       font-weight: 200;
       color: #fff;
-      padding: 2rem 4rem;
+      padding: 1rem 2rem;
       border: 1px solid #fff;
       background: #070512;
       cursor: pointer;
       margin: 0 2rem;
+      display: flex;
     }
   }
 
@@ -1088,10 +1025,11 @@ header {
     }
     & p:nth-child(2) {
       font-size: 1.3rem !important;
-      //   font-family: "Quicksand", sans-serif !important;
       font-weight: 800 !important;
       color: rgb(167, 152, 152) !important;
       margin-bottom: 5rem;
+      width: 80%;
+
     }
   }
 }
@@ -1099,20 +1037,31 @@ header {
   background: #070512;
   justify-content: center;
   padding-top: 4rem;
-  & svg:nth-child(1) {
-    margin-top: 4rem;
-  }
+
   & div {
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
     place-items: center;
-
-    &__img1 {
-      width: 6rem;
-    }
   }
 }
-
+.center{
+  display: flex !important;
+  width: 50%;
+  // height: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+& > img{
+  margin-left: 4rem;
+  width: 70.75%;
+}
+}
+.left-btn{
+  position: absolute;
+  left: 10%;
+}
+.right-btn{
+  position: absolute;
+  right: 10%;
+}
 .seventh {
   background: #070512;
   padding-top: 10rem;
@@ -1339,43 +1288,6 @@ header {
   .second {
     background-size: contain;
     padding-top: 20rem;
-    &__div {
-      &-img1 {
-        width: 20rem;
-        position: relative;
-      }
-      &-img2 {
-        width: 30rem;
-        height: 20rem;
-        position: absolute;
-        top: 95rem;
-        left: 10rem;
-
-        // display: none;
-      }
-      &-img3 {
-        width: 30rem;
-        // display: none;
-        position: absolute;
-        left: 25rem;
-        top: 110rem;
-        height: 20rem;
-      }
-      &-img4 {
-        width: 20rem;
-        // display: none;
-        left: 35%;
-      }
-
-      &-img7 {
-        width: 25rem;
-        border: 6px solid #3f76ff;
-        height: 20rem;
-        top: -60rem;
-        left: 37rem;
-        // display: none;
-      }
-    }
   }
 
   .third {
@@ -1528,51 +1440,7 @@ header {
   .second {
     background-size: cover;
     padding-top: 20rem;
-    &__div {
-      &-img1 {
-        width: 20rem;
-        position: absolute;
-        left: 0%;
-        top: 60%;
-      }
-      &-img2 {
-        width: 30rem;
-        position: absolute;
-        top: 50%;
-        // display: none;
-      }
-      &-img3 {
-        width: 30rem;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-      }
-      &-img4 {
-        width: 30rem;
-        left: 20%;
-      }
-      &-img5 {
-        position: absolute;
-        top: 60%;
-        left: 40%;
-        width: 40rem;
-      }
-      &-img6 {
-        position: absolute;
-        top: 60%;
-        right: 0%;
-        width: 20rem;
-      }
 
-      &-img7 {
-        width: 35rem;
-        border: 6px solid #3f76ff;
-        height: 30rem;
-        top: -70rem;
-        left: 47rem;
-        // display: none;
-      }
-    }
   }
 
   .nineth {
@@ -1898,14 +1766,11 @@ header {
 </style>
 <script>
 export default {
-  head() {
-    return {
-      script: [
-        {
-          src: "/js/main.js",
-        },
-      ],
-    };
-  },
+data(){
+return {};
+},
+methods:{
+
+}
 };
 </script>
