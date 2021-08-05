@@ -59,43 +59,9 @@
       </div>
     </section>
 
-    <section class="background relative">
-      <img
-        class="img12 w-1/4 z-40 absolute"
-        src="~assets/image/Rectangle12.png"
-        alt=""
-      />
-      <img
-        class="img10 w-1/5 absolute"
-        src="~assets/image/Rectangle10.png"
-        alt=""
-      />
-      <img
-        class="img13 w-1/5 absolute"
-        src="~assets/image/Rectangle13.png"
-        alt=""
-      />
-      <img
-        class="img14 w-1/5 absolute"
-        src="~assets/image/Rectangle14.png"
-        alt=""
-      />
-      <img
-        class="img15 absolute w-1/4"
-        src="~assets/image/Rectangle15.png"
-        alt=""
-      />
-      <img
-        class="img16 w-1/5 absolute w-40"
-        src="~assets/image/Rectangle16.png"
-        alt=""
-      />
-      <img
-        class="img17 w-1/5 absolute w-40"
-        src="~assets/image/img17.png"
-        alt=""
-      />
-    </section>
+<section>
+
+</section>
     <section class="whatmhagic relative  grid items-center">
       <div class="whatmahgic__div grid grid-cols-2">
         <div><img src="~assets/image/bluelight.png" alt="" /></div>

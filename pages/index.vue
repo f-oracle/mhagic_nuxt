@@ -1,242 +1,388 @@
 <template>
-  <div class="background">
-    <div class="container background__container">
-      <div>
-        <h1 >Login</h1>
-        <form @submit="submitForm">
-          <label for="name">Username</label>
-          <input name="email" id="email"
-              v-model="email"
-              type="email" required placeholder="Type Here" />
-          <label for="name">Password</label>
-          <input
-           id="password"
-              v-model="password"
-              type="password"
-            required
-            placeholder="8+ characters"
-          />
+  <div class="review">
+    <div class="review__first-div">
+      <a class="login-a" href="/">
+        <img src="~assets/image/backarrow.png" alt="" />
+      </a>
 
-          <div class="background__loginbtn">
-            <div class="w-full grid justify-center my-6">
-              <!-- <a type="submit" href="/review">Login</a> -->
-                <button  href="" type="submit" class="login-a started-a w-full  py-6 rounded-full">
-            Login
-          </button>
-            </div>
+      <p>Welcome,<br />Master Cheng</p>
+    </div>
+    <!-- ./review__first-div -->
 
-            <div>
-              <p>
-                Forgot Password? <span><a href="">Click here</a></span>
-              </p>
-              <p>By continuing you agree to MHAGIC<br />Terms & conditon</p>
+    <div class="review__horizontal">
+      <div class="review__horizontal-div">
+        <div class="video-wrapper transition duration-500 ease-in-out">
+          <video controls>
+            <source src="~assets/video/testvid.mp4" type="video/mp4" />
+          </video>
+          <div class="video-wrapper-text">
+            <img src="~assets/image/IMG_-fb4bb7@2x.png" alt="" />
+            <div class="user-info">
+              <p>Angela Moses</p>
+              <p>24 mins ago</p>
             </div>
           </div>
+        </div>
 
-          <!-- <input type="submit"> -->
-        </form>
+        <div class="video-wrapper transition duration-500 ease-in-out">
+          <video controls>
+            <source src="~assets/video/testvid.mp4" type="video/mp4" />
+          </video>
+          <div class="video-wrapper-text">
+            <img src="~assets/image/IMG_-fb4bb7@2x.png" alt="" />
+            <div class="user-info">
+              <p>Angela Moses</p>
+              <p>24 mins ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-wrapper transition duration-500 ease-in-out">
+          <video controls>
+            <source src="~assets/video/testvid.mp4" type="video/mp4" />
+          </video>
+          <div class="video-wrapper-text">
+            <img src="~assets/image/IMG_-fb4bb7@2x.png" alt="" />
+            <div class="user-info">
+              <p>Angela Moses</p>
+              <p>24 mins ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-wrapper transition duration-500 ease-in-out">
+          <video controls>
+            <source src="~assets/video/testvid.mp4" type="video/mp4" />
+          </video>
+          <div class="video-wrapper-text">
+            <img src="~assets/image/IMG_-fb4bb7@2x.png" alt="" />
+            <div class="user-info">
+              <p>Angela Moses</p>
+              <p>24 mins ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-wrapper transition duration-500 ease-in-out">
+          <video controls>
+            <source src="~assets/video/testvid.mp4" type="video/mp4" />
+          </video>
+          <div class="video-wrapper-text">
+            <img src="~assets/image/IMG_-fb4bb7@2x.png" alt="" />
+            <div class="user-info">
+              <p>Angela Moses</p>
+              <p>24 mins ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-wrapper transition duration-500 ease-in-out">
+          <video controls>
+            <source src="~assets/video/testvid.mp4" type="video/mp4" />
+          </video>
+          <div class="video-wrapper-text">
+            <img src="~assets/image/IMG_-fb4bb7@2x.png" alt="" />
+            <div class="user-info">
+              <p>Angela Moses</p>
+              <p>24 mins ago</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+
+    <div class="footer-div">
+      <div class="footer">
+        <p>You have 400 pending reviews</p>
+        <div class="footer__img">
+          <img src="~assets/image/avatar.png"  alt="" />
+          <div class="judge-info">
+            <p>Master Cheng</p>
+            <p>Judge 1</p>
+          </div>
+
+          <a href="/slide"> Start Marking</a>
+        </div>
+      </div>
+    </div>
+ </div>
 </template>
-<script>
-export default {
-  // name: 'LoginPage',
-  data() {
-    return {
-      email: '',
-      password: ''
+<style lang="scss" scoped>
+.review {
+  width: 100vw;
+  min-height: 100vh;
+  background: #f5f5f6;
+
+  &__first-div {
+    display: flex;
+    padding:2rem 5rem;
+    & > p {
+      font-size: 4rem;
+      font-weight: 550;
+      margin-left: 20rem;
     }
-  },
-  methods: {
-    async submitForm(evt) {
-      evt.preventDefault()
-      const credentials = {
-        email: this.email,
-        password: this.password
-      }
-      try {
-        await this.$auth.loginWith('local', {
-          data: credentials
-        })
-        this.$router.push('/review')
-      } catch (e) {
-        this.$router.push('/')
-      }
+  }
+  &__horizontal {
+    display: flex;
+    width: 100%;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+
+    /* Firefox */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &-div {
+      //    background: red;
+      display: flex;
     }
   }
 }
-</script>
 
-<style lang="scss" scoped>
-.background {
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: grid;
-  place-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 99;
-  cursor: pointer;
-  opacity: 3;
+.video-wrapper {
+  margin: 5rem;
+  background: #f78d8d;
+  padding-top: 10rem;
+  border-radius: 30px;
+  width: 40rem;
 
-  &__container {
-    background: #fff;
-    z-index: 999999;
-    width: 70rem;
-    border-radius: 40px;
-    display: grid;
-    place-items: center;
-    height: 70rem;
+  & video {
+    // width: 40rem;
+    cursor: pointer;
 
-    & > div {
-      width: 70%;
-      margin-top: 5rem;
-
-      & > h1 {
-        font-weight: 700;
-        font-size: 2.5rem;
-        margin-bottom: 2.5rem;
-      }
-
-      form {
-        display: grid;
-
-        & label {
-          font-size: 1.2rem;
-          color: gray;
-          margin-bottom: 1rem;
-          font-weight: bold;
-        }
-
-        & input {
-          padding: 2rem;
-          border-radius: 50px;
-          border: none;
-          background: #eee;
-          margin-bottom: 2.5rem;
-
-          &::placeholder {
-            color: grey;
-            font-size: 1rem;
-          }
-        }
-      }
+  }
+  &-text {
+    display: flex;
+    padding: 3rem;
+    background: #f78d8d;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-top: -1rem;
+    // opacity: 1;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+  &:after, &:before {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    display: none;
+  }
+    & img {
+      width: 5rem;
     }
   }
+  .user-info {
+    margin-top: 1.2rem;
+    margin-left: 1rem;
+    & p:nth-child(1) {
+      color: #fff;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    & p:nth-child(2) {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+}
 
 .login-a {
-  background: rgba(247, 141, 141, 1);
-    color: #ffff;
-    font-size: 1.3rem;
-    font-weight: 900;
-
-
+  & img {
+    // background: red;
+    width: 4rem;
+  }
 }
-  &__loginbtn {
-    & div:nth-child(1) {
-      width: 100%;
-      display: inline-flex;
-      margin-bottom: 3rem;
+.footer-div {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+//   background: red;
+  width: 100%;
+  margin-top: 10rem;
+}
+.footer {
+  background: #fff;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  width: 50%;
+  padding: 1rem 5rem;
+  & > p{
+    //   background: red;
+      font-weight: 500;
+      font-size: 2rem;
+      padding-bottom: 2rem;
 
-      & a {
-        padding: 2rem;
-        text-align: center;
-        border-radius: 50px;
-        background: #f78d8d 0% 0% no-repeat padding-box;
-        color: #fff;
-        text-decoration: none;
-        width: 100%;
-        //font-family: Montserrat;
-        font-size: 1.5rem;
-        font-weight: 600;
-      }
-    }
-
-    & > div:nth-last-child(1) {
-      text-align: center;
-
-      & p:nth-child(1) {
-        color: black;
+  }
+ &__img{
+     display: flex;
+     & img{
+         width: 4rem;
+     }
+     & a{
+        background: #f78d8d;
+        border-radius: 20px;
         font-size: 1.2rem;
-        margin-bottom: 2rem;
-
-        & span a {
-          color: #f78d8d;
-          text-decoration: none;
-        }
+        font-weight: bold;
+        padding: 2rem 4rem;
+        text-decoration: none;
+        color: #fff;
+        position: absolute;
+        left: 60%;
+        bottom: 3rem;
+        cursor: pointer;
+     }
+ }
+}
+.judge-info{
+    margin-left: 1rem;
+      & p:nth-child(1){
+          font-size: 1.2rem;
+          font-weight: 600;
       }
-
-      & p:nth-child(2) {
-        color: grey;
-        font-size: 1.3rem;
-        font-weight: 400;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      & p:nth-child(2){
+          font-size: 0.8rem;
+          font-weight: s00;
       }
-    }
-  }
-
-  &__svg {
-    & svg:nth-child(1) {
-      margin-right: 3rem;
-      margin-left: 2rem;
-    }
-  }
 }
 
-@media screen and (max-width: 768px) {
-  .background {
-    &__loginbtn div:nth-child(1) a {
-      padding: 3rem 0 5rem 0;
-      text-align: center;
-      border-radius: 50px;
-      background: #f78d8d 0% 0% no-repeat padding-box;
-      color: #fff;
-      text-decoration: none;
-      width: 100%;
-      height: 1rem;
-      margin-top: 4rem;
-    }
 
-    &__svg {
-      & > svg {
-        width: 5rem;
-      }
+@media screen and (max-width: 414px){
+  .review{
+    &__horizontal{
+      // background: red;
+      top: 50rem;
     }
   }
-}
-
-@media screen and (max-width: 320px) {
-  .background {
-    width: 100vw;
-    height: 100vh;
-
-    &__container {
-      width: 90%;
-    }
-
-    &__loginbtn {
-      & div:nth-child(1) a {
-        width: 100%;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 774px) {
-  .background {
-    width: 100vw;
-    height: 100vh;
-    &__container{
+  .video-wrapper{
     width: 50rem;
-    height: 60rem;
+  }
+.footer{
+    width: 70%;
+}
+.review {
+  &__first-div {
+
+    & > p {
+      margin-left: 10rem;
     }
   }
+}
+}
+.login-a{
+    & svg{
+        width: 2rem;
+    }
+}
+@media screen and (max-width: 766px){
+  .review{
+&__horizontal{
+  top: 10rem !important;
+}
+  }
+
+}
+@media screen and (max-width: 360px){
+  .review{
+&__horizontal{
+  top: 10rem;
+}
+  }
+    .footer{
+& > p{
+    font-size: 1.5rem;
+}
+    }
+}
+@media screen and (max-width:786px){
+  .video-wrapper{
+    width: 40rem;
+  }
+  .footer{
+& > p{
+  font-size: 1.2rem !important;
+}
+ }
+
+}
+@media screen and (max-width:1136px){
+ .footer{
+& > p{
+  font-size: 1.5rem;
+}
+ }
+ .footer__img {
+   & > a{
+ padding: 2rem;
+   }
+ }
+}
+
+@media screen and (max-width: 768px){
+  .review{
+    &__horizontal{
+      // background: red;
+      top: 20rem !important;
+    }
+  }
+  .video-wrapper{
+    width: 60rem;
+  }
+}
+@media screen and (max-width: 774px){
+   .footer{
+& > p{
+  font-size: 1.3rem;
+}
+   }
+   .footer__img {
+   & > a{
+ padding: 1.2rem;
+   }
+ }
+}
+@media screen and (max-width: 1726px){
+
+.review{
+&__first-div{
+
+& >p{
+font-size: 2rem;
+}
+}
+}
+   .footer{
+& > p{
+  font-size: 1.3rem;
+}
+   }
+   .footer__img {
+   & > a{
+ padding: 1.2rem;
+   }
+ }
 }
 
 
 </style>
+
+<script>
+  export default {
+    head() {
+      return {
+        script: [
+          {
+             src: '/js/main.js'
+          }
+        ],
+      }
+    }
+  }
+
+</script>

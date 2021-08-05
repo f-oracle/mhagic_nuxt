@@ -521,7 +521,7 @@
         <p class="frequent-p">Frequently Asked Questions</p>
         <div class="eight-div container">
           <div class="lorem-div1">
-            <p class="lorem-a">
+            <p class="lorem-a" >
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             </p>
             <svg
@@ -530,6 +530,7 @@
               viewBox="0 0 14 8"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+
             >
               <path
                 d="M12.3335 7L7.00016 1.66667L1.66683 7"
@@ -541,7 +542,7 @@
             </svg>
           </div>
 
-          <div class="lorem-a__svg">
+          <div class="lorem-a__svg" >
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus
               minus alias, nesciunt ab ratione ex earum aliquam natus iure optio
@@ -1774,3 +1775,5 @@ methods:{
 }
 };
 </script>
+
+

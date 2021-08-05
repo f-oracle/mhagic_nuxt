@@ -41,34 +41,33 @@ export default {
   modules: [
     '@nuxtjs/style-resources',
     '@nuxtjs/axios',
-    '@nuxtjs/auth-next',
-
+    '@nuxtjs/auth-next'
   ],
   axios: {
     baseURL: 'http://138.68.141.55/api/v1/',
-    credentials: true
   },
+
   auth: {
+    redirect: {
+      login: '/login',
+      home: '/'
+    },
     strategies: {
       local: {
-        endpoints: {
-          login: {
-            url: 'login',
-            method: 'post',
-            propertyName: false
-          },
-          logout: {
-            url: 'logout',
-            method: 'post'
-          },
-          user: {
-            url: 'review',
-            method: 'get',
-            propertyName: false
-          }
+        token: {
+          property: 'token',
+          global: true,
+          maxAge: 43200
         },
-        tokenRequired: false,
-        tokenType: false
+        user: {
+          property: 'user',
+          autoFetch: false
+        },
+        endpoints: {
+          login: {url: 'login', method: 'post'},
+          logout: {url: 'logout', method: 'get'},
+          user: false
+        }
       }
     }
   },
