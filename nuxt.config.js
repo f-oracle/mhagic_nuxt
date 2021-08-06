@@ -44,7 +44,8 @@ export default {
     '@nuxtjs/auth-next'
   ],
   axios: {
-    baseURL: 'http://138.68.141.55/api/v1/',
+    // baseURL: 'http://138.68.141.55/api/v1/',
+     baseURL: 'https://still-chamber-60764.herokuapp.com/api/v1/'
   },
 
   auth: {
