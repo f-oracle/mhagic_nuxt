@@ -49,8 +49,8 @@ export default {
 
   auth: {
     redirect: {
-      login: '/login',
-      home: '/'
+      login: '/',
+      home: '/home'
     },
     strategies: {
       local: {
@@ -70,6 +70,9 @@ export default {
         }
       }
     }
+  },
+  router: {
+    middleware: ['auth']
   },
 
 
